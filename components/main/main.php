@@ -1,3 +1,5 @@
+<?php require "functions.php" ?>
+
 <!DOCTYPE html>
 <html lang="ru-RU">
 	<head>
@@ -14,8 +16,12 @@
 	
 	</head>
 	<body>
-		<?php require "functions.php" ?>
-		<?php echo vget::component("sheetboard_main"); ?>
+		<div id="main_canva">
+			<?php 
+				$component = vget::component("sheetboard_np"); 
+				foreach($component as $line) echo eval($line);
+			?>
+		</div>
 	</body>
 </html>
 
