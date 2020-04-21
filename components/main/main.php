@@ -16,13 +16,23 @@
 	
 	</head>
 	<body>
-		<div id="main_canva">
-			<?php 
+		<div id="main_frame">
+			<?php
+				if(!(isset($_POST['component']))){
+					$_POST['component'] ='';
+					$component = $_POST['component'];
+					vget::component("shop_order", 10);
+				}
+				
+				else if ($_POST['component'] == 'show_order' ) vget::component("show_order", 10);
+				
+				/* 
 				if (file_exists("../../db_connect.php")){
 					if (isset($_SESSION['s_auth']))	vget::component("show_order", 10);
 					else vget::component("login");
 				}
-				else vget::component("install", 20);
+				else vget::component("install", 20); 
+				*/
 			?>
 		</div>
 	</body>

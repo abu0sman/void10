@@ -4,6 +4,7 @@
 <script src="../../vendors/bootstrap/js/bootstrap.js"></script>
 
 <?php
+//
 function show_component(){
 	echo "<script>
 		$.ajax({
