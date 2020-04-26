@@ -1,8 +1,8 @@
-<?php 
+<?php
 setlocale(LC_ALL, "ru_RU.UTF-8"); 
 
 $db_hostname = "127.0.0.1";
-$db_database = "void";
+$db_database = "void9";
 $db_username = "usr";
 $db_password = "password";
 
@@ -13,4 +13,5 @@ try{
 catch (PDOExeption $log){
 	echo "Невозможно установить соединение с БД";
 }
+
 ?>
