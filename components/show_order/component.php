@@ -2,7 +2,6 @@
 
 <script src="../../vendors/jquery/jquery.js"></script>
 <!--<script src="../../vendors/bootstrap/js/bootstrap.js"></script>-->
-<?php  ?>
 
 <script>
 	$.ajax({
