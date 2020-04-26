@@ -8,14 +8,16 @@ class vget{
 
 	//Метод извлечения компонента
 	public static function component(){
+		$args = func_get_args();
+		
 		// Первый параметр (обязательный) название компонента
-		$component_name = func_get_args()[0];
-				
-		//Обращаемся к файлу компонента
-		include "../$component_name/component.php";
+		$component_name = $args[0];
 		
 		// Все остальные параметры (кроме наименования) передавать в вызываемый компонент.
-		$args = array_shift(func_get_args());
+		$argz = array_pop($args);
+
+		//Обращаемся к файлу компонента
+		include "../$component_name/component.php";
 		
 		//show_component($args);
 		return 0;

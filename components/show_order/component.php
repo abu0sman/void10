@@ -2,10 +2,10 @@
 
 <script src="../../vendors/jquery/jquery.js"></script>
 <!--<script src="../../vendors/bootstrap/js/bootstrap.js"></script>-->
-
 <script>
 	$.ajax({
 		/* data: {actual_order: actual_order, actual_page: actual_page, find_string: find_string}, */
+		data: {argz: <?php echo $argz; ?>},
 		url: '../show_order/show_order.php',
 		type: 'POST',
 		cache: false,

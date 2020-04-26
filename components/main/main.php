@@ -18,12 +18,14 @@
 	<body>
 		<div id="main_frame">
 			<?php
+				// По умолчанию запускается этот компонент
 				if(!(isset($_POST['component']))){
 					$_POST['component'] ='';
 					$component = $_POST['component'];
 					vget::component("shop_order", 10);
 				}
 				
+				// 
 				else if ($_POST['component'] == 'show_order' ) vget::component("show_order", 10);
 				
 				/* 

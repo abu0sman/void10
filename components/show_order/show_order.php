@@ -1,12 +1,19 @@
 <?php
 require_once '../../db_connect.php';
 
-$actual_order = $_POST['actual_order'];
-$actual_page = $_POST['actual_page'];
+$argz = $_POST['argz'];
+
+echo $argz;
+
+if (isset($actual_order)) 
+	$actual_order = $_POST['actual_order'];
+else $actual_order = 1;
+
 if (isset($_POST['find_string']))
 	$find_string = $_POST['find_string'];
 else
 	$find_string = "";
+
 //1. Извлекаем информацию об ордере
 $main_query = "SELECT * FROM m_orders WHERE id = '$actual_order';";
 $main_result = $pdo -> query($main_query);
@@ -25,7 +32,7 @@ $data_pattern = $result_pattern->fetchAll();
 $query_evolution_acc = "SELECT * FROM m_evolution_acc WHERE linked_order = '$actual_order';";
 $result_evolution_acc = $pdo -> query($query_evolution_acc);
 
-include "control_panel.php";
+//include "control_panel.php";
 
 echo "<h2 class='h2'>Задача: $actual_order «" . $topic . "» </h2>";
 	echo '<strong>Поручено: </strong>' . '<br>';
