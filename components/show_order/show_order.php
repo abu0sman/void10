@@ -3,7 +3,7 @@ require_once '../../db_connect.php';
 
 $argz = $_POST['argz'];
 
-echo $argz;
+//echo $argz;
 
 if (isset($actual_order)) 
 	$actual_order = $_POST['actual_order'];
